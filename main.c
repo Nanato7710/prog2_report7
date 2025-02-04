@@ -22,10 +22,23 @@ void print_array(int a[], int size) {
 
 int main(int argc, char const *argv[])
 {
-    const int SIZE = 5;
-    int scores[SIZE] = {0, 60, 70, 100, 90};
-    merge_sort(scores, 0, SIZE-1);
-    print_array(scores, SIZE);
+    printf("実行例1（int scores[5] = {0, 60, 70, 100, 90};とした場合の結果）\n");
+    int scores[5] = {0, 60, 70, 100, 90};
+    printf("scores = ");
+    print_array(scores, 5);
+    merge_sort(scores, 0, 5-1);
+    printf("result = ");
+    print_array(scores, 5);
+
+    printf("\n\n\n");
+
+    printf("実行例2（int scores[6] = {100, 60, 70, 100, 90, 80};）\n");
+    int scores2[6] = {100, 60, 70, 100, 90, 80};
+    printf("scores = ");
+    print_array(scores2, 6);
+    merge_sort(scores2, 0, 6-1);
+    printf("result = ");
+    print_array(scores2, 6);
 
     return 0;
 }
